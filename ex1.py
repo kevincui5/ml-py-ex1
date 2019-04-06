@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Exercise 1: Linear Regression
+# Linear Regression
 
 
 
@@ -13,13 +13,6 @@ import pandas as pd
 #import plotData
 import matplotlib.pyplot as plt
 
-# ==================== Part 1: Basic Function ====================
-# Complete warmUpExercise
-print('Running warmUpExercise ... \n')
-print('5x5 Identity Matrix: \n')
-warmUpExercise.warmUpExercise()
-
-# ======================= Part 2: Plotting =======================
 print('Plotting Data ...\n')
 data = pd.read_csv('ex1data1.txt', header=None)
 X = data.iloc[:, 0].values[:, None]
@@ -28,7 +21,6 @@ m = np.size(y, axis=0)
 plt.plot(X, y, 'rx')
 
 
-# =================== Part 3: Cost and Gradient descent ===================
 from computeCost import computeCost
 X_nobias = X # for later use
 X = np.hstack((np.ones((X.shape[0], 1)), X)) # Add a column of ones to x
@@ -73,9 +65,6 @@ print('For population = 35,000, we predict a profit of %f\n',predict1*10000)
 predict2 = np.dot(np.array([(1, 7)]), theta)
 print('For population = 70,000, we predict a profit of %f\n',predict2*10000)
 '''
-print('Program paused. Press enter to continue.\n')
-pause
-
 ## ============= Part 4: Visualizing J(theta_0, theta_1) =============
 print('Visualizing J(theta_0, theta_1) ...\n')
 
