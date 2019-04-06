@@ -52,13 +52,7 @@ print('Theta found by gradient descent:\n')
 print('%f\n', theta)
 print('Expected theta values (approx)\n')
 print(' -3.6303\n  1.1664\n\n')
-'''
-# Plot the linear fit
-hold on # keep previous plot visible
-plot(X(:,2), X*theta, '-')
-legend('Training data', 'Linear regression')
-hold off # don't overlay any more plots on this figure
-'''
+
 # Predict values for population sizes of 35,000 and 70,000
 predict1 = np.dot(np.array([(1, 3.5)]), theta)
 print('For population = 35,000, we predict a profit of %f\n',predict1*10000)
